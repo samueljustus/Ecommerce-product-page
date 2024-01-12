@@ -32,7 +32,9 @@ function Navbar() {
         <Logo />
         <ul className="hidden md:block md:flex md:flex-row gap-3">
           {navLinks.map((navLink) => (
-            <li className="text-base" key={navLink.id}>{navLink.label}</li>
+            <li className="text-base" key={navLink.id}>
+              {navLink.label}
+            </li>
           ))}
         </ul>
       </div>
@@ -41,13 +43,15 @@ function Navbar() {
         <ProfilePicture />
       </div>
       {isOpened && (
-        <div className="md:hidden fixed top-0 left-0 h-screen z-10 w-[70%] bg-red-500">
-        <ul className="mt-20 p-5">
-          {navLinks.map((navLink) => (
-            <li className="mb-3.5 text-xl font-bold" key={navLink.id}>{navLink.label}</li>
-          ))}
-        </ul>
-        </div> 
+        <div className="md:hidden fixed top-0 left-0 h-screen z-10 w-[70%] bg-[color:hsl(223,64%,98%)]">
+          <ul className="mt-20 p-5">
+            {navLinks.map((navLink) => (
+              <li className="mb-3.5 text-xl font-bold" key={navLink.id}>
+                {navLink.label}
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </nav>
   );

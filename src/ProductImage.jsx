@@ -60,9 +60,7 @@ function ProductImage() {
         onClick={nextImage}
         className="absolute top-[50%] right-5"
       />
-      <div>
-        
-      </div>
+     
     </div>
     
   );
