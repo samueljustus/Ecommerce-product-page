@@ -4,7 +4,15 @@ import Hamburger from "./Hamburger";
 import Logo from "./Logo";
 import ProfilePicture from "./ProfilePicture";
 import { useState } from "react";
-function Navbar() {
+function Navbar({
+  potentialBuy,
+  setPotentialBuy,
+  cartOpen,
+  setCartOpen,
+  price,
+  addToCart,
+  setAddToCart,
+}) {
   const navLinks = [
     { href: "#collections", label: "Collection", id: 0 },
     { href: "#men", label: "Men", id: 1 },
@@ -17,6 +25,10 @@ function Navbar() {
 
   function toggleNavLink() {
     setIsOpened(!isOpened);
+  }
+
+  function toggleCart() {
+    setCartOpen(!cartOpen);
   }
 
   return (
@@ -39,7 +51,13 @@ function Navbar() {
         </ul>
       </div>
       <div className="flex flex-row gap-3 items-center">
-        <Cart />
+        <Cart
+          potentialBuy={potentialBuy}
+          setPotrntialBuy={setPotentialBuy}
+          toggleCart={toggleCart}
+          addToCart={addToCart}
+          setAddToCart={setAddToCart}
+        />
         <ProfilePicture />
       </div>
       {isOpened && (

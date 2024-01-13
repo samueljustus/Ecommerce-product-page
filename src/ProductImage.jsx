@@ -1,6 +1,14 @@
 import { useState } from "react";
+import CartCardEmpty from "./CartCardEmpty";
+import CartCardWithProduct from "./CartCardWithProduct";
 
-function ProductImage() {
+function ProductImage({
+  cartOpen,
+  setCartOpen,
+  potentialBuy,
+  setPotentialBuy,
+  price
+}) {
   const [index, setIndex] = useState(0);
 
   const productImages = [
@@ -27,19 +35,16 @@ function ProductImage() {
   ];
 
   let hasPreve = index > 0;
-  let hasNext = index < productImages.length -1
+  let hasNext = index < productImages.length - 1;
 
   function nextImage() {
-   if(hasNext) {
-       setIndex(index + 1);
-
-   }
-  
+    if (hasNext) {
+      setIndex(index + 1);
+    }
   }
   function preveImage() {
     if (hasPreve) {
-        setIndex(index - 1);
-
+      setIndex(index - 1);
     }
   }
 
@@ -60,10 +65,25 @@ function ProductImage() {
         onClick={nextImage}
         className="absolute top-[50%] right-5"
       />
-     
+      {!cartOpen ? (
+        ""
+      ) : !potentialBuy ? (
+        <CartCardEmpty />
+      ) : (
+        <CartCardWithProduct
+          potentialBuy={potentialBuy}
+          setPotentialBuy={setPotentialBuy}
+          price={price}
+        />
+      )}
+
+      {/* <CartCardEmpty /> */}
+      {/* <CartCardWithProduct /> */}
     </div>
-    
   );
 }
 
 export default ProductImage;
+
+// if potential buy is zero render cartcardempty else render cartcardwith product
+// if cartopen is true the render either of those depending
