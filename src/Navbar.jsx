@@ -28,6 +28,7 @@ function Navbar({
   }
 
   function toggleCart() {
+    console.log(cartOpen)
     setCartOpen(!cartOpen);
   }
 
