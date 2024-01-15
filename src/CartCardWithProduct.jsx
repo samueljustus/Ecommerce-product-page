@@ -1,4 +1,4 @@
-import Button from "./button";
+import Button from "./Button.jsx";
 
 function CartCardWithProduct({ potentialBuy, setPotentialBuy, price }) {
   return (
