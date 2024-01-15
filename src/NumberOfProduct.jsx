@@ -2,7 +2,6 @@ function NumberOfProduct({
   potentialBuy,
   setPotentialBuy,
   price,
-  addToCart,
   setAddToCart,
 }) {
   let neutral = potentialBuy < 1;

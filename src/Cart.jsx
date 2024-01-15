@@ -1,9 +1,9 @@
 function Cart({
   potentialBuy,
-  setPotentialBuy,
+  // setPotentialBuy,
   toggleCart,
   addToCart,
-  setAddToCart,
+  // setAddToCart,
 }) {
   return (
     <div className="relative">

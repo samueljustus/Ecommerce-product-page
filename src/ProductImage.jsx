@@ -4,7 +4,7 @@ import CartCardWithProduct from "./CartCardWithProduct";
 
 function ProductImage({
   cartOpen,
-  setCartOpen,
+  // setCartOpen,
   potentialBuy,
   setPotentialBuy,
   price,

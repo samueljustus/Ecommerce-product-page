@@ -9,7 +9,6 @@ function Navbar({
   setPotentialBuy,
   cartOpen,
   setCartOpen,
-  price,
   addToCart,
   setAddToCart,
 }) {
