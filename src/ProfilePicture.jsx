@@ -1,10 +1,10 @@
 function ProfilePicture() {
   return (
-    <div>
+    <div className="md:scale-150">
       <img
         src="src/img/image-avatar.png"
         alt="a profile picture"
-        className="w-4 h-4"
+        className="w-4 h-4 md:scale-150"
       />
     </div>
   );

@@ -6,7 +6,7 @@ function EcomApp() {
   const [potentialBuy, setPotentialBuy] = useState(0);
   const [cartOpen, setCartOpen] = useState(false);
   const [addToCart, setAddToCart] = useState(false);
-  let price = 125
+  let price = 125;
 
   return (
     <div>

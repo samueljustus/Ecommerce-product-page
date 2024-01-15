@@ -28,12 +28,11 @@ function Navbar({
   }
 
   function toggleCart() {
-    console.log(cartOpen)
     setCartOpen(!cartOpen);
   }
 
   return (
-    <nav className="flex flex-row justify-between items-center p-5 md:px-20 md:py-10">
+    <nav className="flex flex-row justify-between items-center p-5 md:mx-20 md:py-10 md:border-b md:border-[color:hsl(219,9%,45%)]">
       <div className="flex flex-row items-center gap-3 md: gap-7">
         <div className="md:hidden z-20">
           {isOpened ? (
@@ -45,13 +44,16 @@ function Navbar({
         <Logo />
         <ul className="hidden md:block md:flex md:flex-row gap-3">
           {navLinks.map((navLink) => (
-            <li className="text-base" key={navLink.id}>
+            <li
+              className="text-sm font-bold text-[color:hsl(219,9%,45%)] hover:text-[color:hsl(220,13%,13%)] cursor-pointer"
+              key={navLink.id}
+            >
               {navLink.label}
             </li>
           ))}
         </ul>
       </div>
-      <div className="flex flex-row gap-3 items-center">
+      <div className="flex flex-row gap-4 items-center justify-between md:gap-7 ">
         <Cart
           potentialBuy={potentialBuy}
           setPotrntialBuy={setPotentialBuy}

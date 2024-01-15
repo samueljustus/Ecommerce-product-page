@@ -22,8 +22,8 @@ function NumberOfProduct({
 
   return (
     <div>
-      <div className="flex flex row justify-between item-center">
-        <div className="flex flex row justify-between gap-5 item-center">
+      <div className="flex flex-row justify-between item-center md:flex md:flex-col">
+        <div className="flex flex row gap-5 item-center">
           <p className="text-xl">${price}.00</p>
           <p className="bg-[color:hsl(25,100%,94%)] text-[color:hsl(26,100%,55%)] px-1.5 text-sm rounded ">
             50%
@@ -33,13 +33,14 @@ function NumberOfProduct({
           $250.00
         </p>
       </div>
-      <div>
-        <div className="mt-7 flex justify-between items-center">
+      <div className="lg:flex md:items-start ">
+        <div className="mt-7 flex justify-between items-center md:gap-2 lg:w-[40%] lg:justify-around">
           <div>
             <img
               src="src/img/icon-minus.svg"
               alt="subtraction image"
               onClick={subtractOne}
+              className="cursor-pointer"
             />
           </div>
           <div>
@@ -50,13 +51,16 @@ function NumberOfProduct({
               src="src/img/icon-plus.svg"
               alt="addition image"
               onClick={addOne}
+              className="cursor-pointer"
             />
           </div>
         </div>
-        <div className="mt-5 mb-5">
+        <div className="mt-5 mb-5 lg:w-[60%]">
           <button
             className="flex px-5 py-2 bg-[color:hsl(26,100%,55%)] w-full justify-center items-center gap-3 text-[color:hsl(223,64%,98%)] rounded-lg hover:opacity-70 active:opacity-70 "
-            onClick={() => {setAddToCart(true)}}
+            onClick={() => {
+              setAddToCart(true);
+            }}
           >
             <span>
               <img

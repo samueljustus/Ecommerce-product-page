@@ -7,7 +7,7 @@ function ProductImage({
   setCartOpen,
   potentialBuy,
   setPotentialBuy,
-  price
+  price,
 }) {
   const [index, setIndex] = useState(0);
 
@@ -48,23 +48,51 @@ function ProductImage({
     }
   }
 
+  function handleSmallImage(index) {
+    setIndex(index);
+  }
+
   let productImage = productImages[index];
 
   return (
-    <div className="relative z-0 max-w-100">
-      <img src={productImage.url} alt={productImage.alt} />
-      <img
-        src="src/img/icon-previous.svg"
-        alt="preve icon"
-        onClick={preveImage}
-        className="absolute top-[50%] left-5"
-      />
-      <img
-        src="src/img/icon-next.svg"
-        alt="next icon"
-        onClick={nextImage}
-        className="absolute top-[50%] right-5"
-      />
+    <>
+      <div className="z-0 md:w-[50%] relative">
+        <img
+          src={productImage.url}
+          alt={productImage.alt}
+          className="md:rounded-lg"
+        />
+        <img
+          src="src/img/icon-previous.svg"
+          alt="preve icon"
+          onClick={preveImage}
+          className="md:hidden bg-[color:hsl(0,0%,100%)] p-5 rounded-full absolute top-[50%] left-5"
+        />
+        <img
+          src="src/img/icon-next.svg"
+          alt="next icon"
+          onClick={nextImage}
+          className="md:hidden bg-[color:hsl(0,0%,100%)] p-5 rounded-full absolute top-[50%] right-5"
+        />
+
+        <div className="hidden md:flex md:justify-between md:w-[100%] md:max-w-[100%] mt-5 md:gap-2">
+          {productImages.map((image, index) => (
+            <div
+              key={index}
+              className="md:flex md:flex row md:w-20 hover:border hover:border-[color:hsl(26,100%,55%)] rounded-lg"
+            >
+              <img
+                src={image.url}
+                alt={image.alt}
+                className="md:rounded-lg md:hover:opacity-50"
+                onClick={() => {
+                  handleSmallImage(index);
+                }}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
       {!cartOpen ? (
         ""
       ) : !potentialBuy ? (
@@ -76,10 +104,7 @@ function ProductImage({
           price={price}
         />
       )}
-
-      {/* <CartCardEmpty /> */}
-      {/* <CartCardWithProduct /> */}
-    </div>
+    </>
   );
 }
 

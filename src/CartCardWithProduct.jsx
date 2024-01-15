@@ -3,7 +3,7 @@ import Button from "./button";
 function CartCardWithProduct({ potentialBuy, setPotentialBuy, price }) {
   return (
     <div className="flex flex column justify-center items-center">
-      <div className=" mt-5 absolute -top-3 w-[95%] z-5  bg-[color:hsl(0,0%,100%)] rounded-md">
+      <div className=" mt-5 absolute top-20 w-[90%] z-5  bg-[color:hsl(0,0%,100%)] rounded-md md:-top-20 md:w-[20%] md:top-20 md:w-[20%] md:right-10 z-20 shadow-lg">
         <div className="p-5  border-b-2 border-[color:hsl(220,14%,75%)]">
           <p className="text-sm font-bold">Cart</p>
         </div>
@@ -22,14 +22,22 @@ function CartCardWithProduct({ potentialBuy, setPotentialBuy, price }) {
               </p>
               <p className="text-sm text-[color:hsl(219,9%,45%)] font-semibold">
                 ${price}.00 x {potentialBuy}.00{" "}
-                <span className="font-extrabold text-black">${price * potentialBuy}.00</span>
+                <span className="font-extrabold text-black">
+                  ${price * potentialBuy}.00
+                </span>
               </p>
             </div>
             <div>
-              <img src="src/img/icon-delete.svg" alt="" />
+              <img
+                src="src/img/icon-delete.svg"
+                alt="a waste bin basket"
+                onClick={() => {
+                  setPotentialBuy(0);
+                }}
+              />
             </div>
           </div>
-          <Button text="checkout"  />
+          <Button text="checkout" />
         </div>
       </div>
     </div>

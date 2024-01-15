@@ -11,7 +11,7 @@ function MainContent({
   setAddToCart,
 }) {
   return (
-    <div>
+    <div className="md:flex md:flex row gap-5 md:justify-between md:items-center md:px-20 md:my-20">
       <ProductImage
         potentialBuy={potentialBuy}
         setPotentialBuy={setPotentialBuy}
@@ -25,6 +25,8 @@ function MainContent({
         price={price}
         addToCart={addToCart}
         setAddToCart={setAddToCart}
+        cartOpen={cartOpen}
+        setCartOpen={setCartOpen}
       />
     </div>
   );
