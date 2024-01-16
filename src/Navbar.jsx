@@ -44,7 +44,7 @@ function Navbar({
         <ul className="hidden md:block md:flex md:flex-row gap-3">
           {navLinks.map((navLink) => (
             <li
-              className="text-sm font-bold text-[color:hsl(219,9%,45%)] hover:text-[color:hsl(220,13%,13%)] cursor-pointer"
+              className="text-sm font-bold text-[color:hsl(219,9%,45%)] hover:text-[color:hsl(220,13%,13%)] after:hover:bg-[color:hsl(26,100%,55%)] cursor-pointer"
               key={navLink.id}
             >
               {navLink.label}

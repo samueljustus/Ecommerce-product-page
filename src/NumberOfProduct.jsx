@@ -63,7 +63,7 @@ function NumberOfProduct({
           >
             <span>
               <img
-                src="src/img/icon-cart.svg"
+                src="/img/icon-cart.svg"
                 alt="image of a shoping cart basket"
                 className="w-5 h-5"
               />
