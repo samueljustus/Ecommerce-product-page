@@ -8,7 +8,7 @@ function Cart({
   return (
     <div className="relative">
       <img
-        src="src/img/icon-cart.svg"
+        src="/img/icon-cart.svg"
         alt="a cart icon that shows how many items we want to buy"
         onClick={toggleCart}
         className="cursor-pointer"

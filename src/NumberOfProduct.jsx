@@ -36,7 +36,7 @@ function NumberOfProduct({
         <div className="mt-7 flex justify-between items-center md:gap-2 lg:w-[40%] lg:justify-around">
           <div>
             <img
-              src="src/img/icon-minus.svg"
+              src="/img/icon-minus.svg"
               alt="subtraction image"
               onClick={subtractOne}
               className="cursor-pointer"
@@ -47,7 +47,7 @@ function NumberOfProduct({
           </div>
           <div>
             <img
-              src="src/img/icon-plus.svg"
+              src="/img/icon-plus.svg"
               alt="addition image"
               onClick={addOne}
               className="cursor-pointer"

@@ -4,7 +4,7 @@ import CartCardWithProduct from "./CartCardWithProduct";
 
 function ProductImage({
   cartOpen,
-  // setCartOpen,
+  // setCartOp
   potentialBuy,
   setPotentialBuy,
   price,
@@ -14,22 +14,22 @@ function ProductImage({
   const productImages = [
     {
       name: "first image",
-      url: "src/img/image-product-1.jpg",
+      url: "/img/image-product-1.jpg",
       alt: "an image of lether shoe",
     },
     {
       name: "second image",
-      url: "src/img/image-product-2.jpg",
+      url: "/img/image-product-2.jpg",
       alt: "an image ofa lether shoe",
     },
     {
       name: "third image",
-      url: "src/img/image-product-3.jpg",
+      url: "/img/image-product-3.jpg",
       alt: "an image ofa lether shoe",
     },
     {
       name: "fourth image",
-      url: "src/img/image-product-4.jpg",
+      url: "/img/image-product-4.jpg",
       alt: "an image ofa lether shoe",
     },
   ];
@@ -63,13 +63,13 @@ function ProductImage({
           className="md:rounded-lg"
         />
         <img
-          src="src/img/icon-previous.svg"
+          src="/img/icon-previous.svg"
           alt="preve icon"
           onClick={preveImage}
           className="md:hidden bg-[color:hsl(0,0%,100%)] p-5 rounded-full absolute top-[50%] left-5"
         />
         <img
-          src="src/img/icon-next.svg"
+          src="/img/icon-next.svg"
           alt="next icon"
           onClick={nextImage}
           className="md:hidden bg-[color:hsl(0,0%,100%)] p-5 rounded-full absolute top-[50%] right-5"
